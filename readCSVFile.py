@@ -3,12 +3,6 @@ import csv
 def showSubjectCode(subjectCode):
     print(subjectCode)
 
-<<<<<<< HEAD
-with open("semester3.csv") as filecsv:
-    readCSV = csv.reader(filecsv)
-    for row in readCSV:
-        showSubjectCode(row[0])
-=======
 def showCourseName(coureName):
     for name in coureName:
         print(name) 
@@ -30,4 +24,3 @@ with open("semester3.csv") as filecsv:
 showSubjectCode(subjectcodelist)
 showCourseName(coursename)
 showGrade(gradelist)
->>>>>>> parent of 78f8444... Revert "Version 4.0.0"
