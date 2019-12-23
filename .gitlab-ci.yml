@@ -1,4 +1,4 @@
-image: python3
+image: python
 
 before_script:
   - pip install pandas
