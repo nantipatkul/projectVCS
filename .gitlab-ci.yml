@@ -8,6 +8,7 @@ job1:
     - echo "Test job1"
 
 job2 :
+  image: python
   stage: test
   script :
     - pip install pandas
