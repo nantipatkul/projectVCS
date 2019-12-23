@@ -11,7 +11,7 @@ job1:
 job2 :
   stage: test
   script :
-    - python readCSVFile.csv
+    - python readCSVFile.py
 
 job3 :
   stage: deploy
