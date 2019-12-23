@@ -5,7 +5,7 @@ before_script:
 
 cache:
   paths:
-    - Py_modules/
+    - py_modules/
 
 stages: 
   - build
