@@ -1,11 +1,14 @@
 image: python
 
-before_script:
-  - pip install pandas
+variables:
+  PIP_CACHE: "$CI_PROJECT_DIR/.cache/pip"
 
 cache:
   paths:
-    - py_modules/
+    - .cache/pip
+
+before_script:
+  - pip install pandas
 
 stages: 
   - build
@@ -20,7 +23,7 @@ job1:
 job2 :
   stage: test
   script :
-    - python readCSVFile.py
+    - python readCSVFile.py test
 
 job3 :
   stage: deploy
