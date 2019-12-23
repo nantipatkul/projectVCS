@@ -1,0 +1,19 @@
+stages: 
+  - build
+  - test
+  - deploy
+
+job1:
+  stage: build
+  script:
+    - echo "Test job1"
+
+job2 :
+  stage: test
+  script :
+    - python readCSVFile.csv
+
+job3 :
+  stage: deploy
+  script :
+    - echo "Deploy"
