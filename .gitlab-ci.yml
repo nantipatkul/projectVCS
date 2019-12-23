@@ -1,6 +1,27 @@
 image: python
 
+<<<<<<< HEAD
 job :
+=======
+before_script:
+  - pip install pandas
+
+cache:
+  paths:
+    - Py_modules/
+
+stages: 
+  - build
+  - test
+  - deploy
+
+job1:
+  stage: build
+  script:
+    - echo "Test job1"
+
+job2 :
+>>>>>>> parent of d7b63ba... Add Pythom image in yml
   stage: test
   script :
     - python readCSVFile.py test
