@@ -1,8 +1,5 @@
 image: python
 
-<<<<<<< HEAD
-job :
-=======
 before_script:
   - pip install pandas
 
@@ -21,7 +18,6 @@ job1:
     - echo "Test job1"
 
 job2 :
->>>>>>> parent of d7b63ba... Add Pythom image in yml
   stage: test
   script :
     - python readCSVFile.py test
