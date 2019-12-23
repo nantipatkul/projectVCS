@@ -3,10 +3,6 @@ image: python
 before_script:
   - pip install pandas
 
-cache:
-  paths:
-    - Py_modules/
-
 stages: 
   - build
   - test
