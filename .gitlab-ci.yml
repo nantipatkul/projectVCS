@@ -1,7 +1,3 @@
-stages: 
-  - build
-  - test
-
 build:
   image: docker:19.03.1
   stage: build
@@ -11,12 +7,8 @@ build:
     # Use TLS https://docs.gitlab.com/ee/ci/docker/using_docker_build.html#tls-enabled
     DOCKER_HOST: tcp://docker:2376
     DOCKER_TLS_CERTDIR: "/certs"
-    IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+    
   script:
-    - docker info
-
-job :
-  image: python
-  stage: test
-  script :
-    - echo "Test Docker"
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -t juniorkul/testdocker .
+    - docker run -d -p 80:8080 juniorkul/testdocker
