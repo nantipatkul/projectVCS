@@ -1,6 +1,5 @@
 stages: 
-  - build,test,deploy
-
+  - build
 job: 
   image: Python
   stage: build
