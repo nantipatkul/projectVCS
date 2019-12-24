@@ -4,5 +4,5 @@ job:
   image: python
   stage: build
   script:
- 
+    - pip install pandas 
     - python readCSVFile.py
