@@ -1,17 +1,9 @@
-build:
-  image: docker:19.03.1
+stages: 
+  - build,test,deploy
+
+job: 
+  image: Python
   stage: build
-  services:
-    - docker:19.03.1-dind
-  variables:
-    # Use TLS https://docs.gitlab.com/ee/ci/docker/using_docker_build.html#tls-enabled
-    DOCKER_HOST: tcp://docker:2376
-    DOCKER_TLS_CERTDIR: "/certs"
-    
   script:
-    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build -t juniorkul/testdocker .
-    - docker ps
-    - docker ps -a
-    - docker run -it --rm juniorkul/testdocker
-    
+    - pip install pandas 
+    - python readCSVFle.py
