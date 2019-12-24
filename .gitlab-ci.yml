@@ -9,6 +9,4 @@ build:
     DOCKER_TLS_CERTDIR: "/certs"
     
   script:
-    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker build -t juniorkul/testdocker .
-    - docker run -it --rm -v $(pwd)/log:/log juniorkul/testdocker
+    - docker ps
