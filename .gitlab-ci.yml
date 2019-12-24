@@ -15,5 +15,5 @@ job2 :
     - python readCSVFile.py test
   artifacts:
     paths:
-      - output
+      - output/test.txt
     expire_in: 1 days
