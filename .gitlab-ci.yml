@@ -1,19 +1,8 @@
-stages: 
-  - build
-  - test
+before_script:
+  - docker info
 
-job1:
-  stage: build
-  script:
-    - echo "Test job1"
-
-job2 :
+job :
   image: python
   stage: test
   script :
-    - pip install pandas
-    - python readCSVFile.py test
-  artifacts:
-    paths:
-      - output/test.txt
-    expire_in: 1 days
+    - echo "Test Docker"
