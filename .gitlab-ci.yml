@@ -13,3 +13,7 @@ job2 :
   script :
     - pip install pandas
     - python readCSVFile.py test
+  artifacts:
+    paths:
+      - output
+    expire_in: 1 days
