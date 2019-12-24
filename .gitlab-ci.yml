@@ -26,10 +26,9 @@ before_script:
 run:
   script:
     - pip install pandas
-    - python readCSVFile.py bdist_wheel
+    - python readCSVFile.py > output.txt
     # an alternative approach is to install and run:
-  
   artifacts:
     paths:
-      - /*.output
+      - /log/.*txt
 
