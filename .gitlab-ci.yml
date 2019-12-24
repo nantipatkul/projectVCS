@@ -5,4 +5,4 @@ job:
   stage: build
   script:
     - pip install pandas 
-    - python readCSVFle.py
+    - python readCSVFile.py
