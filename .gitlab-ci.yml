@@ -30,5 +30,5 @@ run:
     # an alternative approach is to install and run:
   artifacts:
     paths:
-      - /log/.*txt
+      - /log/*.txt
 
