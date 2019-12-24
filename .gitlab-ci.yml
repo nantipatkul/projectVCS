@@ -1,7 +1,7 @@
 stages: 
   - build
 job: 
-  image: Python
+  image: python
   stage: build
   script:
     - pip install pandas 
