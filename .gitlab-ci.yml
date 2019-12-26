@@ -4,9 +4,6 @@ stages:
   - run
   - deploy
 
-before_script:
-  - python -V  # Print out python version for debugging
-
 run:
   script:
     - pip install pandas
