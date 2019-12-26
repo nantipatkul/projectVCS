@@ -1,14 +1,22 @@
-image: python
-
-stages: 
-  - run
+stages:
+  - build
+  - test
   - deploy
 
-run:
-  script:
+job 1:
+  stage: build
+  image: python
+  script: 
+    - python -v
     - pip install pandas
-    - python readCSVFile.py 
-  
-deploy:
-  script:
+
+job 3:
+  stage: test
+  script: 
+    - python readCSVFile.csv
+
+job 4:
+  stage: deploy
+  script: 
     - echo "Deployment"
+
