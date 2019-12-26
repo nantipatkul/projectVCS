@@ -1,5 +1,8 @@
-image: python:latest
+image: python
 
+stages: 
+  - run
+  - deploy
 
 before_script:
   - python -V  # Print out python version for debugging
@@ -8,3 +11,7 @@ run:
   script:
     - pip install pandas
     - python readCSVFile.py 
+  
+deploy:
+    script:
+      - echo "Deployment"
