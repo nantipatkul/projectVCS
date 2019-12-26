@@ -13,5 +13,5 @@ run:
     - python readCSVFile.py 
   
 deploy:
-    script:
-      - echo "Deployment"
+  script:
+    - echo "Deployment"
