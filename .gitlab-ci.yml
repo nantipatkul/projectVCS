@@ -1,22 +1,19 @@
-stages:
-  - build
-  - test
+image: python
+
+stages: 
+  - run
   - deploy
 
-job 1:
-  stage: build
-  image: python
-  script: 
-    - python -v
+before_script:
+  - python -V  # Print out python version for debugging
+
+job1:
+  stage: run
+  script:
     - pip install pandas
-
-job 3:
-  stage: test
-  script: 
-    - python readCSVFile.csv
-
-job 4:
+    - python readCSVFile.py 
+  
+job2:
   stage: deploy
-  script: 
+  script:
     - echo "Deployment"
-
