@@ -13,8 +13,6 @@ jobs:
       - run:
           command: |
             . venv/bin/activate
-            pwd    
-            ls
-            cat readCSVFile.py            
+              
             python3 readCSVFile.py   
      
