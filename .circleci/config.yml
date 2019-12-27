@@ -5,6 +5,9 @@ jobs:
       - image: circleci/python
     steps:
       - checkout
+      - job1:
+          command: |
+            pip install pandas
       - run:
           command: |
             pwd    
