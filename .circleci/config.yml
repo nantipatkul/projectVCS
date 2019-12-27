@@ -7,5 +7,4 @@ jobs:
       - checkout
       - run:
           command: |
-            cd ..
-            python readCSVFill.py test
+            python3 ../readCSVFill.py test
