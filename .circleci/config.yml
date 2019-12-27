@@ -7,4 +7,5 @@ jobs:
       - checkout
       - run:
           command: |
-            echo 'test'
+            pip install
+            python readCSVFill.py test
