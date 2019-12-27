@@ -5,12 +5,14 @@ jobs:
       - image: circleci/python
     steps:
       - checkout
-      - job1:
+      - run:
           command: |
             pip install pandas
-      - run:
+job2:
+  steps:
+     - run:
           command: |
             pwd    
             ls
             cat readCSVFile.py            
-            python3 readCSVFile.py
+            python3 readCSVFile.py   
