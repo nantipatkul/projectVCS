@@ -13,6 +13,5 @@ jobs:
       - run:
           command: |
             
-              
             python3 readCSVFile.py   
      
