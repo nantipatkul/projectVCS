@@ -7,9 +7,5 @@ jobs:
       - checkout
       - run:
           command: |
-            python3 -m venv venv
-            . venv/bin/activate
-      - run:
-          command: |
-            . venv/bin/activate
+            cd ..
             python readCSVFill.py test
