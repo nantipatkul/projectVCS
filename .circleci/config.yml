@@ -7,5 +7,6 @@ jobs:
       - checkout
       - run:
           command: |
-            pipenv install
-            pipenv run python readCSVFill.py test
+            python3 -m venv venv
+            . venv/bin/activate
+            python readCSVFill.py test
