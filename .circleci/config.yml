@@ -9,6 +9,5 @@ jobs:
           command: |
             pwd    
             ls
-            cat readCSVFile.py
-            pip install pandas
+            cat readCSVFile.py            
             python3 readCSVFile.py
