@@ -7,11 +7,14 @@ jobs:
       - checkout
       - run:
           command: |
+           python3 -m venv venv
+            . venv/bin/activate
             pip install pandas
 job2:
   steps:
      - run:
           command: |
+            . venv/bin/activate
             pwd    
             ls
             cat readCSVFile.py            
