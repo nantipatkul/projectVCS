@@ -7,5 +7,4 @@ jobs:
       - checkout
       - run:
           command: |
-            
-            python ../projectVCS/readCSVFill.py test
+            pwd    
