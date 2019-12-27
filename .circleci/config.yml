@@ -11,4 +11,5 @@ jobs:
             . venv/bin/activate
       - run:
           command: |
+            . venv/bin/activate
             python readCSVFill.py test
