@@ -9,4 +9,6 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
+      - run:
+          command: |
             python readCSVFill.py test
