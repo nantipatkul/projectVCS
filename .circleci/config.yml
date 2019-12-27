@@ -10,3 +10,5 @@ jobs:
             pwd    
             ls
             cat readCSVFile.py
+            pip install pandas
+            python3 readCSVFile.py
