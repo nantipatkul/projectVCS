@@ -8,4 +8,4 @@ jobs:
       - run:
           command: |
             
-            python projectVCS/readCSVFill.py test
+            python ../projectVCS/readCSVFill.py test
