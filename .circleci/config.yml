@@ -7,5 +7,5 @@ jobs:
       - checkout
       - run:
           command: |
-            pip install pandas
-            python readCSVFill.py test
+            
+            python run projectVCS/readCSVFill.py test
